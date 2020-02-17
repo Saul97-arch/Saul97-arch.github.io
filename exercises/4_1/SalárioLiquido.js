@@ -1,15 +1,47 @@
-let salarioBruto = 1800;
+//Me indicado pelo meu digníssimo colega Rhian, metodo wrapper
 
-//Dedução do INSS
-if (salarioBruto <= 1556.94) {
-    salarioBruto *= 0.92;
-} else if (salarioBruto >= 1556.94 && salarioBruto <= 2594.92) {
-    salarioBruto *= 0.89;
-} else if (salarioBruto >= 2594.93 && 5189.82) {
-    salarioBruto -= 570.88;
-} else if (salarioBruto <= 1903.8) {
-    console.log("Isento do Imposto de renda.")
+
+function calcInss(bruto) {
+    if (bruto > 0 && bruto < 1556.95) {
+        bruto -= bruto * 0.08;
+        return bruto;
+    } else if (bruto >= 1556.95 && bruto < 2549.93) {
+        bruto -= bruto * 0.09;
+        return bruto;
+    } else if (bruto >= 2549.93 && bruto < 5189.83) {
+        bruto -= bruto * 0.11;
+        return bruto;
+    } else if (bruto >= 5189.83) {
+        bruto -= 570.88;
+        return bruto;
+    } else {
+        console.log("error");
+    }
 }
 
 
-console.log(Math.abs(salarioBruto));
+function calcIr(bruto) {
+    if (bruto > 1903.98 && bruto < 2826.66) {
+        bruto -= bruto * 0.075 - 142.8;
+        return bruto;
+    } else if (bruto > 2826.66 && bruto < 3751.06) {
+        bruto -= bruto * 0.15 - 354.8;
+        return bruto;
+    } else if (bruto > 3751.05 && bruto < 4664.69) {
+        bruto -= bruto * 0.225 - 636.13;
+        return bruto;
+    } else if (bruto > 4664.68) {
+        bruto -= bruto * 0.275 - 869.36;
+    }
+}
+
+
+//Metodo wrapper em si
+
+function calcSalario(salario) {
+    inss = calcInss(salario);
+    ir = calcIr(inss);
+    return ir;
+}
+
+console.log(calcSalario(3000))
