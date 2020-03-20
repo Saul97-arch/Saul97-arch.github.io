@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    
+<body>
+  <div id="paiDoPai">
+    <div id="pai">
+      <div id="primeiroFilho"></div>
+      <div id="elementoOndeVoceEsta">
+        <div id="primeiroFilhoDoFilho"></div>
+        <div id="segundoEUltimoFilhoDoFilho"></div>
+      </div>
+      Atenção!
+    <div id="terceiroFilho"></div>
+      <div id="quartoEUltimoFilho"></div>
+    </div>
+  </div>
+<script>
+       console.log(document.querySelector("#elementoOndeVoceEsta").parentNode);
+
+      function acessaPeloPaiCor(cor){
+           document.querySelector("#elementoOndeVoceEsta").parentNode.style.color = cor;
+       }
+       acessaPeloPaiCor("green");
+      function acessaPeloFilhoTexto(texto){
+        document.getElementById("primeiroFilhoDoFilho").innerHTML = texto;
+      }
+      acessaPeloFilhoTexto("Eu sou o primeiro filho do filho!");
+
+      console.log(document.getElementById("elementoOndeVoceEsta").firstChild);
+      //Exercicicio 1
+      let irmaoOndeVoceEsta = document.createElement("section");
+      document.getElementById("pai").appendChild(irmaoOndeVoceEsta);
+      
+      //exercicio2
+      let filhoOndeVoceEsta = document.createElement("ul");
+      document.getElementById("elementoOndeVoceEsta").appendChild(filhoOndeVoceEsta);
+      //exercicio 3
+      let filhoDoPrimeiroFilhoDoFilho = document.createElement("p");
+      document.getElementById("primeiroFilhoDoFilho").appendChild(filhoDoPrimeiroFilhoDoFilho);
+      //exercicio 4, use o console.log na variavel x para exibir no console.
+      let x = filhoDoPrimeiroFilhoDoFilho.parentNode.parentNode.nextElementSibling;
+
+      //Remover todos os elementos menos o pai e ondeVoceEsta
+      let pai = document.getElementById("pai");
+      pai.removeChild(pai.firstChild);
+      //Remove elemento já feito no HTML
+      pai.removeChild(pai.firstChild);
+    </script>
+</body>
+</html>
