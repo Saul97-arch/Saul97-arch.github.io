@@ -11,11 +11,15 @@ body {
   font-family: "JetBrains Mono", monospace;
 }
 
+#About {
+  color: #fffffe;
+}
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #eb3030;
+  background-color: #1e1d25;
   display: flex;
   justify-content: space-between;
 }
@@ -47,7 +51,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: rgb(116, 113, 113);
+  background: #0f0e17;
   height: 100vh;
 }
 
@@ -60,18 +64,19 @@ body {
 .welcome-section p {
   font-weight: 700;
   font-size: 1.2rem;
-  color: rgb(136, 255, 0);
+  color: #ff8906;
   text-align: center;
 }
 
 .projects {
   flex-direction: column;
-  background: #c74c4c;
+  background: #0f0e17;
   padding: 3rem 0rem;
 }
 
 .projects-h2 {
   border-bottom: 1px solid #fff;
+  color: #fffffe;
   padding: 3rem;
   font-size: 3rem;
   text-align: center;
@@ -100,7 +105,7 @@ body {
 }
 
 .contact-section {
-  background: #1a1919;
+  background: #0f0e17;
   height: 87vh;
   display: flex;
   flex-direction: column;
