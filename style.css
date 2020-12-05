@@ -99,13 +99,14 @@ body {
 }
 
 .project-image {
+  background-color: #ff8906;
   width: 292px;
   height: 50vh;
   border-radius: 1rem;
 }
 
 .contact-section {
-  background: #0f0e17;
+  background:#211e3a;;
   height: 87vh;
   display: flex;
   flex-direction: column;
@@ -120,8 +121,8 @@ body {
 img:hover {
   background: #333;
   color: #fff;
-  -moz-box-shadow: 0 3px 10px 0 #ccc;
-  -webkit-box-shadow: 0 3px 10px 0 #ccc;
+  -moz-box-shadow: 0 3px 10px 0 rgb(255, 250, 250);
+  -webkit-box-shadow: 0 3px 10px 0 rgb(255, 245, 245);
   text-shadow: 0px 0px 5px #fff;
 }
 
@@ -161,12 +162,12 @@ img:hover {
   }
 
   .projects-container {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   flex-wrap: wrap;
-   align-items: flex-end;
-   height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: 100%;
   }
 
   .link-container {
